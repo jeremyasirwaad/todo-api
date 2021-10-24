@@ -20,7 +20,7 @@ app.get('/',(req,res)=>{
 
 app.get('/todos', async (req,res)=>{
     const Todo = await todo.find();
-
+    res.send(Todo);
     res.json(Todo);
 })
 
